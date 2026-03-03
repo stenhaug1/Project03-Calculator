@@ -5,7 +5,6 @@ while (i2 == 0)
     Console.WriteLine("Input first if you want (+,-,*,/) and then2 numbers and we will give you the result");
 
     string i1 = Console.ReadLine();
-    Console.WriteLine(" you Have chosen " + i1);
     Console.WriteLine("Input your first number please :)");
     double tall1 = double.Parse(Console.ReadLine());
     Console.WriteLine("Input your seccond number please :)");
