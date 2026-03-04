@@ -4,7 +4,7 @@ string reply1 = "Your total after calculations are ";
 
 while (isrunning == true)
 {
-     
+
     Console.WriteLine("Input first if you want (+,-,*,/) and then2 numbers and we will give you the result");
 
     string i1 = Console.ReadLine();
