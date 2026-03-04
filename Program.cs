@@ -1,9 +1,7 @@
-﻿int i2 = 0;
+﻿var calc = new Calc();
+bool isrunning = true;
 
-var calc = new Calc();
-
-
-while (i2 == 0)
+while (isrunning == true)
 {
     Console.WriteLine("Input first if you want (+,-,*,/) and then2 numbers and we will give you the result");
 
@@ -39,16 +37,16 @@ while (i2 == 0)
             break;
     }
     Console.WriteLine($"{reply1} {result}");
-    i2++;
     Console.WriteLine("Would you like to calculate more? Y/N");
     string i3 = Console.ReadLine();
+    
     if (i3 == "y" || i3 == "y" || i3 == "yes" || i3 == "Yes")
     {
-        i2 = 0;
+        isrunning = true;
     }
     else
     {
-        i2 = 1;
+        isrunning = false;
         Console.WriteLine("I hope you found this useful");
     }
 
