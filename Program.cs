@@ -1,5 +1,8 @@
 ﻿int i2 = 0;
 
+var calc = new Calc();
+
+
 while (i2 == 0)
 {
     Console.WriteLine("Input first if you want (+,-,*,/) and then2 numbers and we will give you the result");
@@ -9,41 +12,46 @@ while (i2 == 0)
     double tall1 = double.Parse(Console.ReadLine());
     Console.WriteLine("Input your seccond number please :)");
     double tall2 = double.Parse(Console.ReadLine());
+    var reply1 = "Your total after calculation is ";
+    double result = 0;
 
-    if (i1 == "+")
+    switch (i1)
     {
-        Console.WriteLine("The sum of the numbers are " + (tall1 + tall2));
-        i2 = 1;
-    }
+        case "+":
+            result = calc.Addi(tall1, tall2);
+            break;
 
-    else if (i1 == "-")
-    {
-        Console.WriteLine("The substracted value is " + (tall1 - tall2));
-        i2 = 1;
-    }
-    else if (i1 == "*")
-    {
-        Console.WriteLine("The multiplied value is " + (tall1 * tall2));
-        i2 = 1;
-    }
+        case "-":
+            result = calc.Minu(tall1, tall2);
+            break;
 
-    else if (i1 == "/")
-    {
-        Console.WriteLine("The diveded value is " + (tall1 / tall2));
-        i2 = 1;
-    }
-    else
-    {
-        Console.WriteLine("Please choose your choice of sum, substraction, multiply or divination");
-    }
+        case "*":
+            result = calc.Multi(tall1, tall2);
+            break;
 
-    Console.WriteLine("Would you like to calculate more?");
-    String i3 = Console.ReadLine();
-    if (i3 == "Y" || i3 == "y" || i3 == "yes")
+        case "/":
+            if (tall2 == 0)
+            {
+                Console.WriteLine("We cant divide a number by 0");
+                continue;
+            }
+            result = calc.Divi(tall1, tall2);
+            break;
+    }
+    Console.WriteLine($"{reply1} {result}");
+    i2++;
+    Console.WriteLine("Would you like to calculate more? Y/N");
+    string i3 = Console.ReadLine();
+    if (i3 == "y" || i3 == "y" || i3 == "yes" || i3 == "Yes")
+    {
         i2 = 0;
+    }
     else
     {
         i2 = 1;
+        Console.WriteLine("I hope you found this useful");
     }
-    ;
+
 }
+
+
