@@ -1,16 +1,17 @@
 ﻿var calc = new Calc();
 bool isrunning = true;
+string reply1 = "Your total after calculations are ";
 
 while (isrunning == true)
 {
+     
     Console.WriteLine("Input first if you want (+,-,*,/) and then2 numbers and we will give you the result");
 
     string i1 = Console.ReadLine();
-    Console.WriteLine("Input your first number please :)");
+    Console.WriteLine("Input your first number please");
     double tall1 = double.Parse(Console.ReadLine());
-    Console.WriteLine("Input your seccond number please :)");
+    Console.WriteLine("input your second number please");
     double tall2 = double.Parse(Console.ReadLine());
-    var reply1 = "Your total after calculation is ";
     double result = 0;
 
     switch (i1)
