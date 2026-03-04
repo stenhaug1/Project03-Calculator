@@ -39,8 +39,8 @@ while (isrunning == true)
     Console.WriteLine($"{reply1} {result}");
     Console.WriteLine("Would you like to calculate more? Y/N");
     string i3 = Console.ReadLine();
-    
-    if (i3 == "y" || i3 == "y" || i3 == "yes" || i3 == "Yes")
+
+    if (i3 == "y" || i3 == "Y" || i3 == "yes" || i3 == "Yes")
     {
         isrunning = true;
     }
